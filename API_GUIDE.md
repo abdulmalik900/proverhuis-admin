@@ -2,7 +2,7 @@
 
 Simple guide to fetch data from the blog API in your frontend.
 
-**API URL:** `http://localhost:3001/api`
+**API URL:** `https://proverhuis-admin.vercel.app/api`
 
 ---
 
@@ -12,7 +12,7 @@ Simple guide to fetch data from the blog API in your frontend.
 Get list of all authors.
 
 ```javascript
-fetch('http://localhost:3001/api/authors')
+fetch('https://proverhuis-admin.vercel.app/api/authors')
   .then(res => res.json())
   .then(data => {
     console.log(data.data); // Array of authors
@@ -72,7 +72,7 @@ fetch(`http://localhost:3001/api/authors/${authorId}`)
 Get list of all blog posts.
 
 ```javascript
-fetch('http://localhost:3001/api/posts')
+fetch('https://proverhuis-admin.vercel.app/api/posts')
   .then(res => res.json())
   .then(data => {
     console.log(data.data); // Array of posts
@@ -113,7 +113,7 @@ Get details of one specific blog post.
 ```javascript
 const postId = 'post123';
 
-fetch(`http://localhost:3001/api/posts/${postId}`)
+fetch(`https://proverhuis-admin.vercel.app/api/posts/${postId}`)
   .then(res => res.json())
   .then(data => {
     console.log(data.data); // Single post details
@@ -186,7 +186,7 @@ All API responses have this format:
 ```javascript
 async function displayAuthors() {
   try {
-    const response = await fetch('http://localhost:3001/api/authors');
+    const response = await fetch('https://proverhuis-admin.vercel.app/api/authors');
     const result = await response.json();
     
     if (result.success) {
@@ -212,7 +212,7 @@ async function displayAuthors() {
 ```javascript
 async function displayPosts() {
   try {
-    const response = await fetch('http://localhost:3001/api/posts');
+    const response = await fetch('https://proverhuis-admin.vercel.app/api/posts');
     const result = await response.json();
     
     if (result.success) {
@@ -239,7 +239,7 @@ async function displayPosts() {
 ```javascript
 async function getPublishedPosts() {
   try {
-    const response = await fetch('http://localhost:3001/api/posts');
+    const response = await fetch('https://proverhuis-admin.vercel.app/api/posts');
     const result = await response.json();
     
     if (result.success) {
@@ -259,7 +259,7 @@ async function getPublishedPosts() {
 ```javascript
 async function getPostsByAuthor(authorId) {
   try {
-    const response = await fetch('http://localhost:3001/api/posts');
+    const response = await fetch('https://proverhuis-admin.vercel.app/api/posts');
     const result = await response.json();
     
     if (result.success) {
@@ -279,7 +279,7 @@ async function getPostsByAuthor(authorId) {
 ```javascript
 async function getPostsByTag(tagName) {
   try {
-    const response = await fetch('http://localhost:3001/api/posts');
+    const response = await fetch('https://proverhuis-admin.vercel.app/api/posts');
     const result = await response.json();
     
     if (result.success) {
@@ -299,7 +299,7 @@ async function getPostsByTag(tagName) {
 ```javascript
 async function getPostDetails(postId) {
   try {
-    const response = await fetch(`http://localhost:3001/api/posts/${postId}`);
+    const response = await fetch(`https://proverhuis-admin.vercel.app/api/posts/${postId}`);
     const result = await response.json();
     
     if (result.success) {
