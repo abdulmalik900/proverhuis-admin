@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import connect from '@/lib/database/db_connection';
 import BlogPost from '@/lib/model/BlogPost';
+import Author from '@/lib/model/Author'; // Import Author model for populate to work
 
 // GET all blog posts
 export async function GET(request) {

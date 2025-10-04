@@ -1,9 +1,16 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function AdminFooter() {
-  const currentYear = new Date().getFullYear();
+  // Use state to avoid hydration mismatch
+  const [currentYear, setCurrentYear] = useState(2025);
+  
+  useEffect(() => {
+    // Update year only on client-side
+    setCurrentYear(new Date().getFullYear());
+  }, []);
   
   return (
     <footer className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 border-t border-yellow-300/30 mt-auto">
