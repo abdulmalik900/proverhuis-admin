@@ -234,6 +234,8 @@ export default function PostsPage() {
               width={48}
               height={48}
               className="w-12 h-12 rounded mr-3 object-cover"
+              priority
+              placeholder="empty"
             />
           )}
           <div>

@@ -196,6 +196,8 @@ export default function AuthorsPage() {
               width={40}
               height={40}
               className="w-10 h-10 rounded-full mr-3 object-cover"
+              priority
+              placeholder="empty"
             />
           )}
           <span className="font-medium">{row.name}</span>
